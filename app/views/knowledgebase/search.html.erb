@@ -1,5 +1,5 @@
 <% html_title l(:knowledgebase_title) %>
-<% if @categories.length == 0 and !User.current.logged? %>
+<% if @categories.length == 0 and @articles == 0 and !User.current.logged? %>
 	<h2><%= l(:knowledgebase_title) %></h2>
 	<p><%= l(:message_no_categories) %></p>
 <% else %>
