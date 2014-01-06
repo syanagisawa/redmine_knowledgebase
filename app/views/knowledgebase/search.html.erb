@@ -1,9 +1,40 @@
 <% html_title l(:knowledgebase_title) %>
 <% if @categories.length == 0 and @articles == 0 and !User.current.logged? %>
+    <style type="text/css">
+    <!--
+    .contextual input, .contextual select { font-size: 12px }
+    -->
+    </style>
+  <% if !User.current.logged? %>
+    <style type="text/css">
+    <!--
+    .home { display: none }
+    .projects { display: none }
+    .help { display: none }
+    .work-time { display: none}
+    #quick-search { display: none }
+    -->
+    </style>
+    <% end %>
 	<h2><%= l(:knowledgebase_title) %></h2>
 	<p><%= l(:message_no_categories) %></p>
 <% else %>
-
+    <style type="text/css">
+    <!--
+    .contextual input, .contextual select { font-size: 12px }
+    -->
+    </style>
+  <% if !User.current.logged? %>
+    <style type="text/css">
+    <!--
+    .home { display: none }
+    .projects { display: none }
+    .help { display: none }
+    .work-time { display: none}
+    #quick-search { display: none }
+    -->
+    </style>
+    <% end %>
   <%= render :partial => "search_field" %>
   <p id="category-crumbs" class="breadcrumb">
     <%= link_to l(:label_kb_home), { :controller => 'knowledgebase', :action => 'index' } %>
