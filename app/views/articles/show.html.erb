@@ -1,5 +1,20 @@
 <%= render :partial => "knowledgebase/search_field" %>
-
+    <style type="text/css">
+    <!--
+    .contextual input, .contextual select { font-size: 12px }
+    -->
+    </style>
+  <% if !User.current.logged? %>
+    <style type="text/css">
+    <!--
+    .home { display: none }
+    .projects { display: none }
+    .help { display: none }
+    .work-time { display: none}
+    #quick-search { display: none }
+    -->
+    </style>
+    <% end %>
 <% content_for :header_tags do %>
   <%= stylesheet_link_tag 'knowledgebase', :plugin => 'redmine_knowledgebase' %>
   <%= stylesheet_link_tag 'scm' %>
