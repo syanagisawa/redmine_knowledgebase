@@ -4,7 +4,17 @@
 	<h2><%= l(:knowledgebase_title) %></h2>
 	<p><%= l(:message_no_categories) %></p>
 <% else %>
-
+  <% if !User.current.logged? %>
+    <style type="text/css">
+    <!--
+    .home { display: none }
+    .projects { display: none }
+    .help { display: none }
+    .work-time { display: none}
+    #quick-search { display: none }
+    -->
+    </style>
+  <% end %>
   <%= render :partial => "search_field" %>
   <h2><%= l(:knowledgebase_title) %></h2>
     <div class="contextual">
