@@ -3,9 +3,9 @@ ja:
   allow_anon_access: 匿名アクセス許可
   allow_sort_category_tree: カテゴリをアルファベット順に並び替える
   field_tag_list: タグリスト
-  knowledgebase_title: 知識DB
+  knowledgebase_title: ナレッジベース
   label_article_created: "'%{title}'の記事を作成しました．"
-  label_article_plural: 知識DB記事
+  label_article_plural: ナレッジベース記事
   label_article_removed: 記事を削除しました．
   label_article_updated: 記事を更新しました．
   label_article_viewed:
@@ -46,10 +46,10 @@ ja:
   label_title_articles: 記事
   label_title_category: カテゴリ
   label_updated_who: "%{updater} が%{age}に更新"
-  message_no_articles: 知識データベースにはまだ記事がありません。早速作りましょう！
+  message_no_articles: ナレッジベースにはまだ記事がありません。早速作りましょう！
   message_no_categories: "カテゴリが登録されていません。カテゴリの作成を行う場合はログインする必要があります。"
   show_category_totals: ツリーの全てのカテゴリを表示する
-  summary_item_limit: 知識データベースに表示する記事数
+  summary_item_limit: ナレッジベースに表示する記事数
   title_add_comment: コメントを追加
   title_article_rating: 評価レート
   title_browse_by_category: カテゴリ別一覧
@@ -66,7 +66,7 @@ ja:
   title_top_rated_articles: 評価の高い記事
   title_votes: 投票数
 
-  project_module_knowledgebase: 知識DB
+  project_module_knowledgebase: ナレッジベース
   permission_view_articles: 記事の閲覧
   permission_comment_and_rate_articles: 記事へのコメント・評価
   permission_create_articles: 記事の追加
@@ -75,12 +75,12 @@ ja:
   permission_manage_articles_comments: 記事のコメントの管理
   permission_create_article_categories: 記事へのカテゴリの追加
   permission_manage_article_categories: 記事のカテゴリの管理
-  label_search_knowledgebase: 知識DB内の検索
+  label_search_knowledgebase: ナレッジベース内の検索
 
   permission_manage_knowledgebase: プロジェクト毎の設定変更
   notice_failed_update: 更新に失敗しました。
   involved_articles: 関連性の高い記事
-  flg_involved_articles: チケット画面に知識DBの検索フィールドを追加
+  flg_involved_articles: チケット画面にナレッジベースの検索フィールドを追加
   show_involved_articles_count: チケット画面で表示する記事数の上限
   use_columns_for_default_search: チケット画面での標準検索に使用する項目
   label_default_search: 標準検索
