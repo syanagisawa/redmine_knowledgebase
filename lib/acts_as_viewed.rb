@@ -146,17 +146,21 @@ module ActiveRecord #:nodoc:
         #
         # * <tt>ip</tt> - the viewer ip
         # * <tt>viewer</tt> - an object of the viewer class. Must be valid and with an id to be used. Or nil
-        def view ip, viewer = nil
+        def view ip = "0.0.0.0", viewer = nil
           # Sanity checks for the parameters
           viewing_class = acts_as_viewed_options[:viewing_class].constantize
           if viewer && !(acts_as_viewed_options[:viewer_class].constantize === viewer) 
             raise ViewedError, "the viewer object must be the one used when defining acts_as_viewed (or a descendent of it). other objects are not acceptable"
           end
-                    
+          
           viewing_class.transaction do
-            if !viewed_by? ip, viewer
+            # if !viewed_by? ip, viewer
               view = viewing_class.new              
-              view.viewer_id = viewer.id if viewer && !viewer.id.nil?
+              if viewer.nil?
+                view.viewer_id = 0
+              else
+                view.viewer_id = viewer.id # if viewer && !viewer.id.nil?
+              end
               view.ip = ip
               viewings << view
               target = self if attributes.has_key? 'views'
@@ -164,9 +168,9 @@ module ActiveRecord #:nodoc:
               view.save
               target.save_without_validation if target
               return true
-            else
-              return false
-            end
+            # else
+              # return false
+            # end
           end
         end
 
